@@ -5,14 +5,6 @@ body{
     overflow-x: hidden; /* Remove a rolagem horizontal */
 }
 
-iframe {
-    width: 100%;        /* Ocupa toda a largura disponível */
-    height: 100vh;      /* Ocupa toda a altura da viewport */
-    border: none;       /* Remove a borda */
-    overflow: hidden;   /* Impede a rolagem dentro do iframe */
-}
-
-
 header {
     display: flex;
     justify-content: space-between; /* Distribui os itens uniformemente */
