@@ -1,0 +1,162 @@
+body{
+    background-color: #13131F;
+    color: white;
+    margin: 0;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens uniformemente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-bottom: 1px solid #8257E6;
+}
+
+header nav{
+    width: 33.33%;
+    float: left;
+}
+
+header li{
+    display: inline-block;
+    padding: 9px;
+    float: left;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header .titulo{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.titulo h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; /* Para garantir que fique centralizado */
+    flex: 1; /* Faz o título ocupar o espaço disponível */
+}
+
+button {
+    border-radius: 10px;
+    color: white;
+    background-color: #8257E6;
+    padding: 10px;
+}
+
+header .botao-mb {
+    float: left;
+    width: 33.33%;
+    text-align: right;
+}
+
+.head-right img{
+    height: 70%;
+    width: 70%;
+}
+
+
+#headline {
+    display: inline-block;
+    width: 100%;
+    height: 550px;
+    background-image: url(../douglastacio.com.br/Fundo-sem-fundp.png);
+}
+
+.head-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: left;
+    width: 50%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head-left h2{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+#h2-roxo {
+    color:#8257E6;
+}
+
+.head-right {
+    float: left;
+    width: 50%;
+    height: 100%; 
+}
+
+
+/* Aba de sobre */
+#sobre {
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobre h2{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sobre p {
+    font-size: 21px;
+    color: #8f8f8f;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Habilidades */
+#habilidades, #projetos, #contato {
+    border: 1px solid red;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;       
+}
+
+#habilidades h2 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: auto; /* Mantém o tamanho padrão */
+}
+
+::-webkit-scrollbar-track {
+    background: #13131F; /* Cor de fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #13131F; /* Cor do "polegar" da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do "polegar" ao passar o mouse */
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+/* Para Firefox */
+html {
+    scrollbar-width: auto; /* Mantém o tamanho padrão */
+    scrollbar-color: #8257E6 #13131F; /* Cor do "polegar" e do fundo */
+}
