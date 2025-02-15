@@ -7,60 +7,67 @@
     <title>Douglas Tácio - Software Engineer</title>
 </head>
 <body>
-    <!-- aba do cabeçalho-->
-   <div id="header"></div>
-   <iframe src="components/header.html" frameborder="0"></iframe>
+    <!-- Cabeçalho dinâmico -->
+    <div id="header"></div>
 
-   <!-- aba do conteudo principal-->
-   <main>
-    <section id="headline">
-        <div class="head-left">
-             <h2>Óla, eu sou o</h2>
-             <h2 id="h2-roxo">Douglas Tácio :)</h2>
-             <p>Software Engineer</p>
-             <button>Download CV</button>
-             <button>Entrar em Contato</button>
-        </div>
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="headline">
+            <div class="head-left">
+                <h2>Óla, eu sou o</h2>
+                <h2 id="h2-roxo">Douglas Tácio :)</h2>
+                <p>Software Engineer</p>
+                <button class="download-cv">Download CV</button>
+                <button class="contato-btn">Entrar em Contato</button>
+            </div>
+            <div class="head-right"></div>
+        </section>
 
-        <div class="head-right">
-              
-        </div>
-        
-    </section>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Desenvolvedor Front-end com experiência em React.js, Next.js,
+                Redux, JavaScript, TypeScript, Styled Components, Material UI
+                e consumo de APIs REST. Apaixonado pelo desenvolvimento de
+                componentes reutilizáveis. Também possui experiência em projetos
+                gerenciados por Metodologias Ágeis. Formado em Software Enginner e
+                Fundador da Rungoware Academy.</p>
+        </section>
 
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Desenvolvedor Front-end com experiência em React.js, Next.js, </br>
-            Redux, JavaScript, TypeScript, Styled Components, Material UI </br> e consumo de APIs REST. Apaixonado pelo 
-             desenvolvimento de</br> componentes reutilizáveis. Também possui experiência em projetos </br>
-             gerenciados por Metodologias Ágeis. Formado em Software Enginner e </br>Fundador da Rungoware Academy.</p>
-    </section>
- 
-    <section id="habilidades">
-       <h2>Habilidades</h2> 
-    </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2> 
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <article>
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1</p>
+            </article>
+            <article>
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        <p>douglastacio23@gmail.com</p>
+        <p>(69) 9 9265-0078</p>
+    </footer>
     
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <article>
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1</p>
-        </article>
-        <article>
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2</p>
-        </article>
-    </section>
-   </main>
-
-   <!-- Aba de contato -->
-   <footer id="contato">
-     <h2>Contato</h2>
-     <p>douglastacio23@gmail.com</p>
-     <p>(69) 9 9265-0078</p>
-   </footer>
-</body>
-
-<script src="js/script.js"></script>
+<!-- Scripts -->
 <script src="js/main.js"></script>
+<script>
+    // Carregamento do header
+    fetch('components/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+            // Inicializa funcionalidades após carregar
+            if (typeof initHeader === 'function') initHeader();
+        });
+</script>
+</body>
 </html>
